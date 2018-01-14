@@ -36,9 +36,11 @@ body textarea:required:valid
 
 html, body
 	height: 100%
+	width: 100%
+	min-height: 100%
 
 body
-	font-size: 16px
+	font-size: 14px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
@@ -46,9 +48,132 @@ body
 	overflow-x: hidden
 	opacity: 1
 
+h1, h2, h3, h4, h5, h6, p
+	padding: 0
+	margin: 0
+
+.p0
+	padding: 0
+
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
+
+/*---Header---*/
+.header
+	background: #181818
+	background: radial-gradient(ellipse at center, #181818 15%,#1f2326 30%,#1e1d22 45%,#1f2326 53%,#181818 63%,#181818 77%,#181818 87%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181818', endColorstr='#181818',GradientType=1 )
+	padding-top: 2.85rem
+	&__nav
+		&-list
+			list-style-type: none
+			padding: 0
+		&-item
+			display: inline-block
+			padding: 0 10px
+			&:first-of-type
+				padding: 0 10px 0 0
+			&:last-of-type
+				padding: 0 0 0 10px
+		&-link
+			display: block
+			color: $headerNavLinkColor
+			transition: all .4s ease
+			&:hover, &:focus
+				color: $headerNavLinkColor
+	&__auth
+		&-list
+			list-style-type: none
+			padding: 0
+			margin: 0
+		&-item
+			display: inline-block
+			text-align: center
+			margin-right: 18px
+			margin-left: -3px
+			&:last-of-type
+				margin-right: 0
+			&:first-of-type
+				margin-left: 0
+		&-item:first-of-type .header__auth-link
+			font-weight: 700
+			background: #1f2326
+			color: $headerAuthSignInLinkColor
+			&:hover, &:focus
+				color: $headerAuthSignInLinkColor
+		&-link
+			display: inline-block
+			background: #079797
+			width: 85px
+			padding: 10px 15px
+			text-transform: uppercase
+			color: $headerNavLinkColor
+			transition: all .4s ease
+			&:hover, &:focus
+				color: $headerNavLinkColor
+	&__heading
+		color: $headerHeadingColor
+		padding: 2.85rem 0
+		text-transform: uppercase
+		font-weight: 400
+		font-family: "Anton", sans-serif
+		font-size: 4rem
+		line-height: 1.1
+		letter-spacing: 1.8px
+		&-span
+			color: $headerHeadingSpanColor
+	&__subheading
+		color: $headerSubheadingColor
+		font-size: 2.6rem
+		line-height: 1.1
+	&__subheading > span
+		display: block
+		font-size: 2.6rem
+		padding-bottom: 2.85rem
+	&__text
+		color: $headerTextColor
+		text-transform: uppercase
+		font-size: 2.3rem
+	&__stage
+		text-transform: uppercase
+		font-size: 2.3rem
+		padding: 2.85rem 0
+		font-family: "Anton", sans-serif
+		font-weight: 400
+	&__button
+		display: inline-block
+		padding: 10px 35px
+		margin-bottom: 2.5rem
+		text-transform: uppercase
+		text-align: center
+		font-size: 2rem
+		font-weight: 700
+		border-radius: 5px
+		color: $headerButtonColor
+		background: #faae0b
+		background: linear-gradient(to right, #faae0b 0%,#f57d1e 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faae0b', endColorstr='#f57d1e',GradientType=1 )
+		transition: all .4s ease-in-out
+		&:hover, &:focus
+			color: $headerButtonColor
+	&__image
+		position: relative
+		top: 8rem
+	&__statistic
+		color: $headerStatisticColor
+		font-size: 2.4rem
+		text-transform: uppercase
+		font-family: "Anton", sans-serif
+		font-weight: 400
+		line-height: 1.1
+		text-align: center
+/*---Header---end---*/
+/*---Statistic---*/
+.statistic
+	background: $statisticBG
+	padding: 2.85rem 0 5rem
+/*---Statistic---end---*/
 
 @import "media" // Всегда в конце
