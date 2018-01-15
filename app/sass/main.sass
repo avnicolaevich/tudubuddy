@@ -175,5 +175,208 @@ h1, h2, h3, h4, h5, h6, p
 	background: $statisticBG
 	padding: 2.85rem 0 5rem
 /*---Statistic---end---*/
+/*---Periodic---*/
+.periodic
+	padding: 4.3rem 0
+	background: #f8f8f8
+	&__heading
+		text-align: center
+		font-size: 2.5rem
+		color: #000
+		padding-bottom: 4.3rem
+	&__time
+		box-shadow: 0 0 20px rgba(70, 60, 53, 0.3)
+		position: relative
+		margin-bottom: 4rem
+		&-label
+			background: $periodicLabelBG
+			text-transform: uppercase
+			width: max-content
+			padding: 10px 30px
+			color: #000
+			font-weight: 700
+			&--even
+				background: #00cfc7
+		&-item
+			padding: 10px 30px
+			color: #000
+			font-size: 1.6rem
+			border-bottom: 1px solid #cab65f
+			&:last-of-type
+				border-bottom: none
+			&-lang
+				text-transform: uppercase
+				font-weight: 700
+			&-check
+				float: right
+				text-transform: uppercase
+				color: #cd8650
+				&:hover, &:focus
+					text-decoration: underline
+			&-math
+				text-transform: uppercase
+				font-weight: 700
+	&__description
+		color: #fff
+		padding: 39px 25px
+		background: #00cfc7
+		box-shadow: 0 0 20px rgba(70, 60, 53, 0.3)
+		&-heading
+			font-size: 3rem
+		&-text
+			font-size: 2.3rem
+			line-height: 1.2
+/*---Periodic---end---*/
+/*---Features---*/
+.features
+	padding: 4.3rem 0
+	background: #f8f8f8
+	color: #727272
+	&__heading
+		text-align: center
+		font-size: 3.5rem
+		padding-bottom: 2.85rem
+		letter-spacing: 5px
+	&__subheading
+		text-align: center
+		font-size: 2.5rem
+		line-height: 1
+		padding-bottom: 5rem
+	&__item
+		margin-bottom: 4rem
+		&-image
+			display: inline-block
+			float: left
+			margin-right: 20px
+		&-wrap
+			overflow-x: hidden
+		&-heading
+			font-size: 1.9rem
+			padding-bottom: 1rem
+		&-subheading
+			font-size: 1.5rem
+			line-height: 1.3
+/*---Features---end---*/
+/*---Steps---*/
+.steps
+	&__slider
+		&-list
+			padding: 0
+			list-style-type: none
+		&-link
+			display: block
+			width: max-content
+			text-decoration: none
+			cursor: pointer
+			&:hover, &:focus
+				color: #e9b900
+			&-number
+				color: #e9b900
+				font-size: 2rem
+				text-transform: uppercase
+			&-text
+				font-size: 1.6rem
+				color: #5b5b5b
+				line-height: 1.2
+				&:hover, &:focus
+					cursor: pointer
+		&-item
+			position: relative
+			padding-left: 40px
+			&::before
+				content: ""
+				position: absolute
+				top: 11px
+				left: 0
+				background: #e9b900
+				width: 10px
+				height: 10px
+				border-radius: 50%
+			&.active
+				font-weight: 700
+/* Slideshow container */
+.slideshow-container
+	width: 268px
+	position: relative
+	margin: auto
+	background: url("../img/phone.png")
+	background-repeat: no-repeat
+.slideshow-container-image
+	border-radius: 40px
+	box-shadow: 0 0 20px rgba(70, 60, 53, 0.3)
+.mySlides
+	display: none
+	position: absolute
+	top: 50px
+	left: 14px
+	width: 240px
+	height: 430px
+	margin: auto
+.mySlides-image
+	width: 100%
+	height: 100%
+.prev, .next
+	cursor: pointer
+	position: absolute
+	top: 50px
+	width: 200px
+	height: 430px
+	padding: 16px
+	color: #fff
+	font-weight: bold
+	font-size: 18px
+	transition: 0.6s ease
+	border-radius: 3px 0 0 3px
+	background-color: #fff
+	box-shadow: 0 0 20px rgba(70, 60, 53, 0.3)
+.next
+	border-radius: 0 3px 3px 0
+	right: -200px
+.prev
+	left: -200px
+.prev:hover, .next:hover
+	text-decoration: none
+	color: rgba(0,0,0,0.8)
+	background-color: rgba(0,0,0,0.1)
+.text
+	color: #f2f2f2
+	font-size: 15px
+	padding: 8px 12px
+	position: absolute
+	bottom: 8px
+	width: 100%
+	text-align: center
+.numbertext
+	color: #f2f2f2
+	font-size: 12px
+	padding: 8px 12px
+	position: absolute
+	top: 0
+//.dot
+//	cursor: pointer
+//	height: 15px
+//	width: 15px
+//	margin: 0 2px
+//	background-color: #bbb
+//	border-radius: 50%
+//	display: inline-block
+//	transition: background-color 0.6s ease
+//.active, .dot:hover
+//	background-color: #717171
+.fade
+	-webkit-animation-name: fade
+	-webkit-animation-duration: 1.5s
+	animation-name: fade
+	animation-duration: 1.5s
+@-webkit-keyframes fade
+	from
+		opacity: .4
+	to
+		opacity: 1
+@keyframes fade
+	from
+		opacity: .4
+	to
+		opacity: 1
 
 @import "media" // Всегда в конце
