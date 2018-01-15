@@ -10,3 +10,33 @@ $headerAuthSignInLinkColor: #c3814d
 $headerStatisticColor: #ec7e27
 $statisticBG: #080808
 $periodicLabelBG: #faad11
+
+@mixin transition
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  -ms-transition: all 0.4s ease
+  -o-transition: all 0.4s ease
+  transition: all 0.4s ease
+@mixin contactInput
+  max-width: 520px
+  width: 100%
+  border: 1px solid transparent
+  border-radius: 20px
+  outline: 0
+  color: #000
+  height: 50px
+  padding-left: 2rem
+  margin-bottom: 3rem
+@mixin contactButton
+  display: inline-block
+  background: #f6f6f6
+  background: linear-gradient(to bottom, #f6f6f6 0%,#767676 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#767676',GradientType=0 )
+  width: 185px
+  font-size: 2rem
+  padding: 9px 10px
+  border-radius: 20px
+  text-align: center
+  text-transform: uppercase
+  color: #000
+  cursor: pointer
