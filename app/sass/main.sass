@@ -144,7 +144,7 @@ h1, h2, h3, h4, h5, h6, p
 		font-weight: 400
 	&__button
 		display: inline-block
-		padding: 10px 35px
+		padding: 10px 25px
 		margin-bottom: 2.5rem
 		text-transform: uppercase
 		text-align: center
@@ -159,8 +159,20 @@ h1, h2, h3, h4, h5, h6, p
 		&:hover, &:focus
 			color: $headerButtonColor
 	&__image
+		display: block
 		position: relative
 		top: 8rem
+		&-description
+			position: absolute
+			font-size: 5rem
+			color: #fff
+			font-weight: 700
+			font-family: 'Kreon', serif
+			top: 38px
+			left: 25px
+			transform: rotate(-1deg)
+			line-height: 1.1
+			text-align: center
 	&__statistic
 		color: $headerStatisticColor
 		font-size: 3rem
@@ -181,8 +193,9 @@ h1, h2, h3, h4, h5, h6, p
 	background: #f8f8f8
 	&__heading
 		text-align: center
-		font-size: 2.5rem
+		font-size: 4rem
 		color: #009891
+		line-height: 1.3
 		padding-bottom: 4rem
 	&__time
 		box-shadow: 0 0 20px rgba(70, 60, 53, 0.3)
@@ -223,6 +236,7 @@ h1, h2, h3, h4, h5, h6, p
 		box-shadow: 0 0 20px rgba(70, 60, 53, 0.3)
 		&-heading
 			font-size: 3rem
+			line-height: 1.3
 		&-text
 			font-size: 2.3rem
 			line-height: 1.2
@@ -233,7 +247,7 @@ h1, h2, h3, h4, h5, h6, p
 	color: #727272
 	&__heading
 		text-align: center
-		font-size: 2.5rem
+		font-size: 4rem
 		color: #009891
 	&__subheading
 		text-align: center
@@ -274,7 +288,7 @@ h1, h2, h3, h4, h5, h6, p
 				font-size: 2rem
 				text-transform: uppercase
 			&-text
-				font-size: 1.6rem
+				font-size: 1.5rem
 				color: #5b5b5b
 				line-height: 1.2
 				&:hover, &:focus
@@ -305,26 +319,28 @@ h1, h2, h3, h4, h5, h6, p
 			right: 1rem
 	&__heading
 		font-size: 4rem
-		color: #000
+		color: #009891
 		padding-bottom: 4rem
 /* Slideshow container */
 .slideshow-container
-	width: 268px
+	max-width: 100%
+	height: 393px
 	position: relative
-	margin: auto
-	background: url("../img/phone.png")
+	top: 55px
+	background: url("../img/macbook.png")
 	background-repeat: no-repeat
+	background-size: contain
 .slideshow-container-image
-	border-radius: 40px
-	box-shadow: 0 0 20px 10px rgba(70, 60, 53, 0.3)
+	width: 100%
+//border-radius: 40px
+	//box-shadow: 0 0 20px 10px rgba(70, 60, 53, 0.3)
 .mySlides
 	display: none
 	position: absolute
-	top: 50px
-	left: 14px
-	width: 240px
-	height: 430px
-	margin: auto
+	top: 22px
+	left: 82px
+	width: 521px
+	height: 326px
 .mySlides-image
 	width: 100%
 	height: 100%
@@ -380,18 +396,11 @@ h1, h2, h3, h4, h5, h6, p
 //.active, .dot:hover
 //	background-color: #717171
 .fade
-	-webkit-animation-name: fade
-	-webkit-animation-duration: 1.5s
 	animation-name: fade
-	animation-duration: 1.5s
-@-webkit-keyframes fade
-	from
-		opacity: .4
-	to
-		opacity: 1
+	animation-duration: 0.4s
 @keyframes fade
 	from
-		opacity: .4
+		opacity: .9
 	to
 		opacity: 1
 /*---Membership---*/
@@ -401,9 +410,10 @@ h1, h2, h3, h4, h5, h6, p
 	color: #727272
 	&__heading
 		text-align: center
-		font-size: 2.5rem
+		font-size: 4rem
 		color: #009891
 		padding-bottom: 4rem
+		line-height: 1.3
 	&__card
 		box-shadow: 0 0 20px rgba(70, 60, 53, 0.3)
 		position: relative
@@ -469,7 +479,7 @@ h1, h2, h3, h4, h5, h6, p
 	padding: 4rem 0
 	&__heading
 		text-align: center
-		font-size: 2.5rem
+		font-size: 4rem
 		padding-bottom: 4rem
 		color: #009891
 	&__quote
@@ -507,13 +517,20 @@ h1, h2, h3, h4, h5, h6, p
 	background: #080808
 	border-bottom: 5px solid #fff
 	&__heading
-		font-size: 2.5rem
+		font-size: 4rem
 		padding-bottom: 4rem
 		color: #009891
 		text-transform: uppercase
 	&__form
 		&-firstName
 			@include contactInput
+		&-message
+			position: absolute
+			bottom: 5%
+			left: 50%
+			transform: translateX(-50%)
+			display: none
+			color: #009891
 		&-lastName
 			@include contactInput
 			float: right
@@ -543,7 +560,7 @@ h1, h2, h3, h4, h5, h6, p
 /*---Footer---*/
 .footer
 	position: relative
-	padding: 2rem 0 100px
+	padding: 2rem 0
 	background: #080808
 	&__list
 		margin: 0
@@ -574,7 +591,7 @@ h1, h2, h3, h4, h5, h6, p
 				margin-right: 30px
 	&__wrap
 		position: fixed
-		display: block
+		display: none
 		bottom: 0
 		left: 0
 		width: 100%
@@ -617,4 +634,73 @@ h1, h2, h3, h4, h5, h6, p
 	75%
 		transform: translateX(-3px) rotate(-0.6deg)
 /*---Footer---end---*/
+/*---Hamburger---*/
+.header__mobileHam
+	display: block
+	width: max-content
+	cursor: pointer
+	float: right
+.header__mobileHam-line
+	width: 48px
+	height: 5px
+	border-radius: 2px
+	margin: 6px
+.header__mobileHam:hover .header__mobileHam-line
+	transition: 0.4s ease-in-out
+.clicked .header__mobileHam-line--1
+	width: 48px
+.clicked .header__mobileHam-line--2
+	width: 32px
+.clicked .header__mobileHam-line--3
+	width: 16px
+.header__mobileHam-line--1
+	background: #F8B222
+.header__mobileHam-line--2
+	background: #009891
+.header__mobileHam-line--3
+	background: #F47A18
+/*---Hamburger---end---*/
+/*---Mobile---menu---*/
+.header__mobileNav.open .header__mobileNav-list
+	transform: translateX(0)
+	visibility: visible
+	z-index: 1
+.header__mobileNav-list
+	visibility: hidden
+	z-index: -1
+	width: 170px
+	background: #181818
+	padding: 0
+	margin: 0 auto
+	list-style: none
+	position: fixed
+	top: 160px
+	right: 0
+	height: auto
+	transform: translateX(105%)
+	transition: transform 0.5s ease-in-out
+.header__mobileNav-item
+	position: relative
+	padding: 0
+	margin: 0
+.header__mobileNav-item:hover
+	background: #323232
+.header__mobileNav-item:hover .header__mobileNav-link
+	border-left-color: #f46818
+.header__mobileNav-link
+	padding: 10px
+	white-space: nowrap
+	display: block
+	font-size: 1.5rem
+	color: $headerNavLinkColor
+	transition: all .4s ease
+	border-left: 15px solid
+	border-left-color: #F47A18
+	border-right: 5px solid transparent
+	width: 100%
+.header__mobileNav-link:hover,
+.header__mobileNav-link:focus
+	color: $headerNavLinkColor
+	text-decoration: none
+/*---Mobile---menu---end*/
 @import "media" // Всегда в конце

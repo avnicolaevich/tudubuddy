@@ -18,7 +18,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Wendy+One' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -26,35 +26,55 @@
 	<header class="header">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-4 col-md-2">
+				<div class="col-xs-6 col-md-2">
 					<div class="header__logo">
 						<a class="header__logo-link" href="#">
 							<img class="header__logo-img img-responsive" src="./img/tudubuddy-logo.png" alt="Tudubuddy">
 						</a>
 					</div>
 				</div>
-				<div class="col-xs-8 p0 visible-sm visible-xs">
-					<div class="header__auth pull-right">
-						<ul class="header__auth-list">
-							<li class="header__auth-item">
-								<a class="header__auth-link" href="#!">
-									Sign in
-								</a>
-							</li>
-							<li class="header__auth-item">
-								<a class="header__auth-link" href="#!">
-									Parent
-								</a>
-							</li>
-							<li class="header__auth-item">
-								<a class="header__auth-link" href="#!">
-									Kid
-								</a>
-							</li>
-						</ul>
+				<div class="col-xs-6 visible-xs visible-sm">
+					<div class="header__mobileHam" id="hamburger">
+						<div class="header__mobileHam-line header__mobileHam-line--1"></div>
+						<div class="header__mobileHam-line header__mobileHam-line--2"></div>
+						<div class="header__mobileHam-line header__mobileHam-line--3"></div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-7">
+				<div class="header__mobileNav">
+					<ul class="header__mobileNav-list">
+						<li class="header__mobileNav-item">
+							<a class="header__mobileNav-link" href="#!">
+								Why Tudubuddy?
+							</a>
+						</li>
+						<li class="header__mobileNav-item">
+							<a class="header__mobileNav-link" href="#!">
+								How it works?
+							</a>
+						</li>
+						<li class="header__mobileNav-item">
+							<a class="header__mobileNav-link" href="#!">
+								Testimonials
+							</a>
+						</li>
+						<li class="header__mobileNav-item">
+							<a class="header__mobileNav-link" href="#!">
+								Feature
+							</a>
+						</li>
+						<li class="header__mobileNav-item">
+							<a class="header__mobileNav-link" href="#!">
+								Our Prices
+							</a>
+						</li>
+						<li class="header__mobileNav-item">
+							<a class="header__mobileNav-link" href="#!">
+								Contact us
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="hidden-xs hidden-sm col-md-7">
 					<div class="header__nav">
 						<ul class="header__nav-list">
 							<li class="header__nav-item">
@@ -90,7 +110,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-3 p0 visible-md visible-lg">
+				<div class="col-xs-12 col-md-3 p0">
 					<div class="header__auth">
 						<ul class="header__auth-list">
 							<li class="header__auth-item">
@@ -133,7 +153,15 @@
 					</a>
 				</div>
 				<div class="col-md-4">
-					<img class="header__image img-responsive" src="./img/header_image.png" alt="Concepts">
+					<figure class="header__image">
+						<img class="header__image-picture img-responsive" src="./img/header_image.png" alt="Concepts">
+						<figcaption class="header__image-description">
+							<p>SAT</p>
+							<p>11+ exams</p>
+							<p>Olympiad</p>
+							<p>Basic Concepts</p>
+						</figcaption>
+					</figure>
 				</div>
 			</div>
 		</div>
@@ -534,7 +562,7 @@
 	<section class="steps">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-xs-12 col-md-5">
 					<div class="steps__slider">
 						<h3 class="steps__heading">
 							How It Works
@@ -545,7 +573,7 @@
 									<span class="steps__slider-link-number">Step 1</span>
 								</a>
 								<p class="steps__slider-link-text">
-									Login using google or facebook accounts. <br>
+									Login using google or facebook accounts.
 									Add accounts for your children.
 								</p>
 							</li>
@@ -554,7 +582,7 @@
 									<span class="steps__slider-link-number">Step 2</span>
 								</a>
 								<p class="steps__slider-link-text">
-									Go to Add rewards page. <br>
+									Go to Add rewards page.
 									Set goals and rewards using the Add rewards feature.
 								</p>
 							</li>
@@ -563,7 +591,7 @@
 									<span class="steps__slider-link-number">Step 3</span>
 								</a>
 								<p class="steps__slider-link-text">
-									Start by Adding assessments to your child`s todo list. <br>
+									Start by Adding assessments to your child`s todo list.
 									Select from more then 40 topics -> Subtopics
 								</p>
 							</li>
@@ -572,7 +600,7 @@
 									<span class="steps__slider-link-number">Step 4</span>
 								</a>
 								<p class="steps__slider-link-text">
-									Receive email notifications once the assessments are taken. <br>
+									Receive email notifications once the assessments are taken.
 									Approve to assessments to award points to child.
 								</p>
 							</li>
@@ -581,16 +609,16 @@
 									<span class="steps__slider-link-number">Step 5</span>
 								</a>
 								<p class="steps__slider-link-text">
-									Child orders rewards after earning sufficient points <br>
+									Child orders rewards after earning sufficient points
 									and you hand over the rewards to child.
 								</p>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<div class="col-lg-6">
+				<div class="col-xs-12 col-md-7 p0">
 					<div class="slideshow-container">
-						<img class="slideshow-container-image" src="./img/phone.png" alt="">
+						<!--<img class="slideshow-container-image" src="./img/macbook.png" alt="">-->
 						<div class="mySlides fade">
 							<img class="mySlides-image img-responsive" src="./img/img1.jpg">
 						</div>
@@ -606,13 +634,13 @@
 						<div class="mySlides fade">
 							<img class="mySlides-image img-responsive" src="./img/img5.jpg">
 						</div>
-						<!-- Next and previous buttons -->
-						<a class="prev" onclick="plusSlides(-1)">
-							<i class="steps__slider-leftIcon fa fa-angle-double-left" aria-hidden="true"></i>
-						</a>
-						<a class="next" onclick="plusSlides(1)">
-							<i class="steps__slider-rightIcon fa fa-angle-double-right" aria-hidden="true"></i>
-						</a>
+						<!--&lt;!&ndash; Next and previous buttons &ndash;&gt;-->
+						<!--<a class="prev" onclick="plusSlides(-1)">-->
+							<!--<i class="steps__slider-leftIcon fa fa-angle-double-left" aria-hidden="true"></i>-->
+						<!--</a>-->
+						<!--<a class="next" onclick="plusSlides(1)">-->
+							<!--<i class="steps__slider-rightIcon fa fa-angle-double-right" aria-hidden="true"></i>-->
+						<!--</a>-->
 					</div>
 				</div>
 			</div>
@@ -788,15 +816,19 @@
 				<form action="" class="contact__form">
 					<div class="col-sm-12 col-md-6">
 						<input class="contact__form-firstName" name="firstName" type="text" value="" placeholder="First Name" required>
+						<span class="contact__form-message">This field must be required</span>
 					</div>
 					<div class="col-sm-12 col-md-6">
 						<input class="contact__form-lastName" name="lastName" type="text" value="" placeholder="Last Name" required>
+						<span class="contact__form-message">This field must be required</span>
 					</div>
 					<div class="col-sm-12 col-md-6">
 						<input class="contact__form-email" name="email" type="email" value="" placeholder="Email" required>
+						<span class="contact__form-message">This field must be required</span>
 					</div>
 					<div class="col-sm-12 col-md-6">
 						<input class="contact__form-comment" name="comment" type="text" value="" placeholder="Comments">
+						<span class="contact__form-message">This field must be required</span>
 					</div>
 					<div class="col-xs-12 col-sm-5 col-md-3">
 						<a class="contact__form-button" type="submit">Submit</a>
@@ -851,7 +883,7 @@
 				<div class="col-xs-12">
 					<div class="footer__wrap">
 						<a class="footer__button wobble-hor-bottom visible-xs visible-sm" href="#!">
-							Sign up for free trial!
+							Sign up for free trial !
 						</a>
 					</div>
 				</div>

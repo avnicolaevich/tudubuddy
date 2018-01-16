@@ -2,7 +2,7 @@ $(function() {
 
 });
 
-var slideIndex = 1;
+var slideIndex = 0;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -29,4 +29,30 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
+}
+
+autoShowSlides();
+
+function autoShowSlides() {
+    var k;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (k = 0; k < slides.length; k++) {
+        slides[k].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    for (k = 0; k < dots.length; k++) {
+        dots[k].className = dots[k].className.replace(" active", "");
+    }
+    dots[slideIndex-1].className += " active";
+    setTimeout(autoShowSlides, 5000); // Change image every 2 seconds
+}
+
+var ham = document.getElementById('hamburger');
+var mobileMenu = document.querySelector('.header__mobileNav');
+ham.onclick = function () {
+    ham.classList.toggle('clicked');
+    mobileMenu.classList.toggle('open');
 }
