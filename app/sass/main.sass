@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6, p
 		top: 8rem
 	&__statistic
 		color: $headerStatisticColor
-		font-size: 2.4rem
+		font-size: 3rem
 		text-transform: uppercase
 		font-family: "Anton", sans-serif
 		font-weight: 400
@@ -173,17 +173,17 @@ h1, h2, h3, h4, h5, h6, p
 /*---Statistic---*/
 .statistic
 	background: $statisticBG
-	padding: 2.85rem 0 5rem
+	padding: 2.5rem 0
 /*---Statistic---end---*/
 /*---Periodic---*/
 .periodic
-	padding: 4.3rem 0
+	padding: 4rem 0 0
 	background: #f8f8f8
 	&__heading
 		text-align: center
 		font-size: 2.5rem
-		color: #000
-		padding-bottom: 4.3rem
+		color: #009891
+		padding-bottom: 4rem
 	&__time
 		box-shadow: 0 0 20px rgba(70, 60, 53, 0.3)
 		position: relative
@@ -229,19 +229,17 @@ h1, h2, h3, h4, h5, h6, p
 /*---Periodic---end---*/
 /*---Features---*/
 .features
-	padding: 4.3rem 0
 	background: #f8f8f8
 	color: #727272
 	&__heading
 		text-align: center
-		font-size: 3.5rem
-		padding-bottom: 2.85rem
-		letter-spacing: 5px
+		font-size: 2.5rem
+		color: #009891
 	&__subheading
 		text-align: center
-		font-size: 2.5rem
+		font-size: 1.9rem
 		line-height: 1
-		padding-bottom: 5rem
+		padding-bottom: 4rem
 	&__item
 		margin-bottom: 4rem
 		&-image
@@ -259,7 +257,7 @@ h1, h2, h3, h4, h5, h6, p
 /*---Features---end---*/
 /*---Steps---*/
 .steps
-	padding: 4.3rem 0
+	padding: 4rem 0
 	&__slider
 		&-list
 			padding: 0
@@ -308,7 +306,7 @@ h1, h2, h3, h4, h5, h6, p
 	&__heading
 		font-size: 4rem
 		color: #000
-		padding-bottom: 4.3rem
+		padding-bottom: 4rem
 /* Slideshow container */
 .slideshow-container
 	width: 268px
@@ -398,13 +396,14 @@ h1, h2, h3, h4, h5, h6, p
 		opacity: 1
 /*---Membership---*/
 .membership
-	padding: 4.3rem 0
+	padding: 4rem 0
 	background: #f8f8f8
 	color: #727272
 	&__heading
 		text-align: center
 		font-size: 2.5rem
-		padding-bottom: 3rem
+		color: #009891
+		padding-bottom: 4rem
 	&__card
 		box-shadow: 0 0 20px rgba(70, 60, 53, 0.3)
 		position: relative
@@ -467,12 +466,12 @@ h1, h2, h3, h4, h5, h6, p
 /*---Membership---end---*/
 /*---Testimonials---*/
 .testimonials
-	padding: 4.3rem 0
+	padding: 4rem 0
 	&__heading
 		text-align: center
 		font-size: 2.5rem
-		padding-bottom: 4.3rem
-		color: #000
+		padding-bottom: 4rem
+		color: #009891
 	&__quote
 		box-shadow: 0 0 20px rgba(70, 60, 53, 0.3)
 		&-brackets
@@ -504,14 +503,13 @@ h1, h2, h3, h4, h5, h6, p
 /*---Testimonials---end---*/
 /*---Contact---*/
 .contact
-	padding: 5.8rem 0
+	padding: 4rem 0
 	background: #080808
 	border-bottom: 5px solid #fff
 	&__heading
 		font-size: 2.5rem
-		letter-spacing: 2px
-		padding-bottom: 2rem
-		color: #fff
+		padding-bottom: 4rem
+		color: #009891
 		text-transform: uppercase
 	&__form
 		&-firstName
@@ -544,7 +542,8 @@ h1, h2, h3, h4, h5, h6, p
 /*---Contact---end---*/
 /*---Footer---*/
 .footer
-	padding: 2rem 0
+	position: relative
+	padding: 2rem 0 100px
 	background: #080808
 	&__list
 		margin: 0
@@ -573,5 +572,49 @@ h1, h2, h3, h4, h5, h6, p
 				color: #727272
 			&:first-of-type
 				margin-right: 30px
+	&__wrap
+		position: fixed
+		display: block
+		bottom: 0
+		left: 0
+		width: 100%
+		padding: 20px
+		height: auto
+		background: #fff
+		box-shadow: 0 0 20px rgba(70, 60, 53, 0.3)
+	&__button
+		display: inline-block
+		background: #faae0b
+		background: linear-gradient(to right, #faae0b 0%,#f57d1e 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faae0b', endColorstr='#f57d1e',GradientType=1 )
+		width: max-content
+		text-align: center
+		margin: auto
+		padding: 10px 15px
+		text-transform: uppercase
+		color: $headerNavLinkColor
+		font-weight: 700
+		border-radius: 5px
+		box-shadow: 1px 1px 6px black
+		transition: all .4s ease
+		&:hover, &:focus
+			color: $headerNavLinkColor
+		&:hover.wobble-hor-bottom
+			animation: wobble-hor-bottom 1s alternate backwards
+@-webkit-keyframes wobble-hor-bottom
+	0%,
+	100%
+		transform: translateX(0%)
+		transform-origin: 50% 50%
+	15%
+		transform: translateX(-15px) rotate(-3deg)
+	30%
+		transform: translateX(7.5px) rotate(3deg)
+	45%
+		transform: translateX(-7.5px) rotate(-1.3deg)
+	60%
+		transform: translateX(4.5px) rotate(1.2deg)
+	75%
+		transform: translateX(-3px) rotate(-0.6deg)
 /*---Footer---end---*/
 @import "media" // Всегда в конце
