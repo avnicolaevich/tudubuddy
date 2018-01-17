@@ -601,12 +601,13 @@ h1, h2, h3, h4, h5, h6, p
 		box-shadow: 0 0 20px rgba(70, 60, 53, 0.3)
 	&__button
 		display: inline-block
+		margin-left: calc(50% - 100px)
 		background: #faae0b
 		background: linear-gradient(to right, #faae0b 0%,#f57d1e 100%)
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faae0b', endColorstr='#f57d1e',GradientType=1 )
-		width: max-content
+		width: 200px
+		float: left
 		text-align: center
-		margin: auto
 		padding: 10px 15px
 		text-transform: uppercase
 		color: $headerNavLinkColor
@@ -635,17 +636,17 @@ h1, h2, h3, h4, h5, h6, p
 		transform: translateX(-3px) rotate(-0.6deg)
 /*---Footer---end---*/
 /*---Hamburger---*/
-.header__mobileHam
-	display: block
-	width: max-content
+.footer__mobileHam
+	display: inline-block
+	width: 60px
 	cursor: pointer
 	float: right
-.header__mobileHam-line
+.footer__mobileHam-line
 	width: 48px
 	height: 5px
 	border-radius: 2px
 	margin: 6px
-.header__mobileHam:hover .header__mobileHam-line
+.footer__mobileHam:hover .footer__mobileHam-line
 	transition: 0.4s ease-in-out
 .clicked .header__mobileHam-line--1
 	width: 48px
@@ -653,20 +654,23 @@ h1, h2, h3, h4, h5, h6, p
 	width: 32px
 .clicked .header__mobileHam-line--3
 	width: 16px
-.header__mobileHam-line--1
+.footer__mobileHam-line--1
+	margin-top: 8px
 	background: #F8B222
-.header__mobileHam-line--2
+.footer__mobileHam-line--2
 	background: #009891
-.header__mobileHam-line--3
+.footer__mobileHam-line--3
 	background: #F47A18
 /*---Hamburger---end---*/
 /*---Mobile---menu---*/
 .header__mobileNav.open .header__mobileNav-list
 	transform: translateX(0)
 	visibility: visible
+	opacity: 1
 	z-index: 1
 .header__mobileNav-list
 	visibility: hidden
+	opacity: 0
 	z-index: -1
 	width: 170px
 	background: #181818

@@ -60,9 +60,13 @@
   .header__auth
     max-width: 235px
     width: 100%
-    margin: 20px auto 0
+    float: right
+  .header__auth-item
+    margin-right: 10px
   .steps__heading
     text-align: center
+  .header__mobileNav-list
+    top: 120px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -95,10 +99,24 @@
     height: 100%
   .testimonials__quote-text
     height: auto
+  .header__mobileNav-list
+    top: 110px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
-    /**/
+  .header__auth
+    max-width: 185px
+    width: 100%
+    float: right
+  .header__auth-item
+    margin-right: 3px
+  .header__auth-link
+    width: 55px
+    padding: 5px 0
+  .header__mobileNav-list
+    top: 100px
+  .footer__button
+    margin-left: 0
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

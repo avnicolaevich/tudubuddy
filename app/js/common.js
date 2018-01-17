@@ -56,3 +56,9 @@ ham.onclick = function () {
     ham.classList.toggle('clicked');
     mobileMenu.classList.toggle('open');
 }
+
+
+window.addEventListener('mouseup', function (e) {
+    if (e.target !== mobileMenu && e.target.parentNode !== mobileMenu) {
+        mobileMenu.classList.remove('open');
+}
