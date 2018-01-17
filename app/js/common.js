@@ -47,18 +47,22 @@ function autoShowSlides() {
         dots[k].className = dots[k].className.replace(" active", "");
     }
     dots[slideIndex-1].className += " active";
-    setTimeout(autoShowSlides, 5000); // Change image every 2 seconds
+    setTimeout(autoShowSlides, 5000); // Change image every 5 seconds
 }
 
 var ham = document.getElementById('hamburger');
-var mobileMenu = document.querySelector('.header__mobileNav');
+var mobileMenu = $('.header__mobileNav');
 ham.onclick = function () {
     ham.classList.toggle('clicked');
-    mobileMenu.classList.toggle('open');
+    event.stopPropagation();
+    
+    if(mobileMenu.hasClass('open')){
+        mobileMenu.removeClass('open');
+    } else {
+        mobileMenu.addClass('open');
+    }
 }
 
-
-window.addEventListener('mouseup', function (e) {
-    if (e.target !== mobileMenu && e.target.parentNode !== mobileMenu) {
-        mobileMenu.classList.remove('open');
-}
+$(document).click( function(){
+    mobileMenu.removeClass('open');
+});
