@@ -3,12 +3,8 @@
 @import "vars"
 
 *
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
 	box-sizing: border-box
 	&:before, &:after
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
 		box-sizing: border-box
 
 *::-webkit-input-placeholder
@@ -187,6 +183,109 @@ h1, h2, h3, h4, h5, h6, p
 	background: $statisticBG
 	padding: 2.5rem 0
 /*---Statistic---end---*/
+/*---Reception---*/
+.reception-header 
+    background: #181818
+    padding: 1.8rem 0 1.3rem
+    position: relative
+    z-index: 1
+    box-shadow: -5px 2px 4px 2px rgba(0, 0, 0, .75)
+.reception-header__nav-list 
+    list-style-type: none
+    padding: 0
+.reception-header__nav-item 
+    display: inline-block
+    padding: 0 10px
+.reception-header__nav-item:first-of-type 
+    padding: 0 10px 0 0
+.reception-header__nav-item:last-of-type 
+    padding: 0 0 0 10px
+.reception-header__nav-link 
+    display: block
+    color: #fff
+    transition: all .4s ease
+.reception-header__nav-link:focus,
+.reception-header__nav-link:hover 
+    color: #fff
+.reception-header__auth 
+    float: right
+.reception-header__auth-list 
+    list-style-type: none
+    padding: 0
+    margin: 0
+.reception-header__auth-item 
+    display: inline-block
+    text-align: center
+    margin-right: 18px
+    margin-left: -4px
+.reception-header__auth-item:last-of-type 
+    margin-right: 0
+.reception-header__auth-item:first-of-type 
+    margin-left: 0
+.reception-header__auth-item:first-of-type .header__auth-link 
+    font-weight: 700
+    background: #1f2326
+    color: #c3814d
+.reception-header__auth-item:first-of-type .header__auth-link:focus,
+.reception-header__auth-item:first-of-type .header__auth-link:hover 
+    color: #c3814d
+.reception-header__auth-link 
+    display: inline-block
+    background: #079797
+    width: 85px
+    padding: 10px 15px
+    text-transform: uppercase
+    color: #fff
+    -webkit-transition: all .4s ease
+    -o-transition: all .4s ease
+    transition: all .4s ease
+.reception-header__auth-link:focus,
+.reception-header__auth-link:hover 
+    color: #fff
+.title 
+    width: 100%
+    background: #e8e8e8
+.reception 
+    background: #fff
+    padding-bottom: 3rem
+.reception__heading 
+    text-transform: uppercase
+    font-size: 4rem
+    color: #6a6a6a
+    line-height: 1.3
+    padding: 1rem 0
+.reception__subheading 
+    padding: 3rem 0 1.5rem
+    text-transform: uppercase
+    font-size: 3rem
+    color: #009891
+    line-height: 1.3
+.reception__wrapper 
+    max-width: 360px
+    height: 234px
+    overflow: hidden
+.reception__count 
+    font-size: 2rem
+    color: #ec7e27
+    line-height: 1.3
+.reception__list 
+    margin: 0
+    list-style-type: none
+    padding-left: 3px
+.features__item,
+.periodic__time 
+    margin-bottom: 4rem
+.reception__list-item 
+    font-size: 1.6rem
+    color: #6a6a6a
+    font-weight: 700
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+.reception__list-item:before 
+    content: '-'
+    font-size: 1.6rem
+/*---Reception---end---*/
 /*---Periodic---*/
 .periodic
 	padding: 4rem 0 0
@@ -239,7 +338,7 @@ h1, h2, h3, h4, h5, h6, p
 			line-height: 1.3
 		&-text
 			font-size: 2.3rem
-			line-height: 1.2
+			line-height: 1.3
 /*---Periodic---end---*/
 /*---Features---*/
 .features
@@ -327,13 +426,10 @@ h1, h2, h3, h4, h5, h6, p
 	height: 393px
 	position: relative
 	top: 55px
-	background: url("../img/macbook.png")
-	background-repeat: no-repeat
+	background: url("../img/macbook.png") no-repeat
 	background-size: contain
 .slideshow-container-image
 	width: 100%
-//border-radius: 40px
-	//box-shadow: 0 0 20px 10px rgba(70, 60, 53, 0.3)
 .mySlides
 	display: none
 	position: absolute
@@ -384,17 +480,6 @@ h1, h2, h3, h4, h5, h6, p
 .dot.active > .steps__slider-link
 	text-decoration: underline
 	color: #e9b900
-//.dot
-//	cursor: pointer
-//	height: 15px
-//	width: 15px
-//	margin: 0 2px
-//	background-color: #bbb
-//	border-radius: 50%
-//	display: inline-block
-//	transition: background-color 0.6s ease
-//.active, .dot:hover
-//	background-color: #717171
 .fade
 	animation-name: fade
 	animation-duration: 0.4s
@@ -424,7 +509,7 @@ h1, h2, h3, h4, h5, h6, p
 			background: #00d1cb
 			color: #000
 			padding: 10px
-			font-size: 1.5rem
+			font-size: 2.5rem
 			&--even
 				background: #faad11
 		&-name
@@ -436,18 +521,19 @@ h1, h2, h3, h4, h5, h6, p
 		&-period,
 		&-count,
 		&-management
-			color: #646464
-			font-size: 2.5rem
-			position: relative
-			&::after
-				content: ""
-				position: absolute
-				top: 100%
-				left: 50%
-				transform: translateX(-50%)
-				width: 18rem
-				height: 1px
-				background: #00d1cb
+            position: relative
+            color: #646464
+            font-size: 1.6rem
+            font-weight: 400
+            &:after
+                content: ""
+                position: absolute
+                top: 100%
+                left: 50%
+                transform: translateX(-50%)
+                width: 18rem
+                height: 1px
+                background: #00d1cb
 		&-period--even,
 		&-count--even,
 		&-management--even
@@ -461,7 +547,7 @@ h1, h2, h3, h4, h5, h6, p
 			background: #039c97
 			background: linear-gradient(to right, #039c97 0%,#009c8f 100%)
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#039c97', endColorstr='#009c8f',GradientType=1 )
-			width: 100px
+			width: 125px
 			padding: 10px 15px
 			text-transform: uppercase
 			color: #fff
@@ -608,7 +694,7 @@ h1, h2, h3, h4, h5, h6, p
 		width: 200px
 		float: left
 		text-align: center
-		padding: 10px 15px
+		padding: 10px 10px
 		text-transform: uppercase
 		color: $headerNavLinkColor
 		font-weight: 700
@@ -704,4 +790,238 @@ h1, h2, h3, h4, h5, h6, p
 	color: $headerNavLinkColor
 	text-decoration: none
 /*---Mobile---menu---end*/
+.cloud__wrapper 
+    width: 100%
+    height: 100%
+.header__cloud 
+    width: 375px
+    height: 375px
+    top: 30px
+    float: right
+    position: relative
+    background: none
+.header__cloud-word:hover
+    animation: heartbeat 1.5s ease-in-out infinite both
+.header__cloud-word 
+    position: absolute
+    background-color: transparent
+    display: inline-block
+    animation-name: bounceIn
+.header__cloud-word1 
+    color: #ed3103
+    font-size: 5rem
+    text-transform: uppercase
+    font-family: 'Anton', Arial sans-serif
+    right: 50%
+    top: 38%
+    transform: rotateZ(-90deg)
+    font-weight: 700
+    letter-spacing: 10px
+    position: absolute
+.header__cloud-word2 
+    color: #0e3400
+    font-size: 2rem
+    text-transform: uppercase
+    font-weight: 700
+    font-family: 'Wendy', Arial sans-serif
+    right: 6%
+    top: 4%
+    letter-spacing: 9px
+    position: absolute
+.header__cloud-word3 
+    color: #f0ec00
+    font-size: 4rem
+    position: absolute
+    bottom: 9%
+    right: 0
+    transform: rotateZ(-90deg)
+    font-weight: 700
+.header__cloud-word4 
+    color: #690011
+    font-size: 5rem
+    bottom: 44%
+    font-weight: 700
+    left: 30%
+    font-family: 'Kreon', Arial sans-serif
+    animation-delay: .55s
+.header__cloud-word5 
+    color: #496c0e
+    font-size: 4rem
+    top: 18%
+    left: 35%
+.header__cloud-word6 
+    color: #398D97
+    font-size: 2rem
+    top: 3%
+    left: 9%
+    font-style: italic
+    animation-delay: .2s
+.header__cloud-word7 
+    color: #f177f7
+    font-size: 3rem
+    bottom: 3%
+    left: 7%
+    font-style: italic
+    animation-delay: .15s
+.header__cloud-word8 
+    color: #05d18d
+    font-size: 4rem
+    top: 49%
+    right: 4%
+    animation-delay: .25s
+.header__cloud-word9 
+    color: #362688
+    font-size: 3rem
+    top: 40%
+    right: 4%
+    animation-delay: .13s
+.header__cloud-word10 
+    color: #2aff77
+    font-size: 3rem
+    top: 11%
+    left: 21%
+    animation-delay: .05s
+.header__cloud-word11 
+    color: #ee389c
+    font-size: 3rem
+    top: 27%
+    left: 21%
+    animation-delay: .23s
+.header__cloud-word12 
+    color: #f8a154
+    font-size: 4rem
+    top: 20%
+    right: 5%
+    font-weight: 700
+    animation-delay: .03s
+.header__cloud-word13 
+    color: #7e7cfc
+    font-size: 3rem
+    top: 52%
+    left: 22%
+    animation-delay: .17s
+.header__cloud-word14 
+    color: #cb2925
+    font-size: 2rem
+    bottom: 43%
+    left: 55%
+    animation-delay: .15s
+.header__cloud-word15 
+    color: #0f7f4c
+    font-size: 3rem
+    top: 13%
+    left: 53%
+    animation-delay: .05s
+.header__cloud-word16 
+    color: #2a7d90
+    font-size: 3rem
+    top: 30%
+    left: 51%
+    animation-delay: .14s
+.header__cloud-word17 
+    color: #8eb23f
+    font-size: 2rem
+    top: 9%
+    left: 45%
+    animation-delay: .25s
+.header__cloud-word18 
+    color: #5d010e
+    font-size: 4rem
+    bottom: 7%
+    left: 26%
+    letter-spacing: 5px
+    font-family: 'Wendy', Arial sans-serif
+    animation-delay: .2s
+.header__cloud-word19 
+    color: #96844b
+    font-size: 2rem
+    top: 39%
+    left: 19%
+    animation-delay: .27s
+.header__cloud-word20 
+    color: #714348
+    font-size: 3rem
+    top: 60%
+    left: 63%
+    animation-delay: .3s
+.header__cloud-word21 
+    color: #714348
+    font-size: 3rem
+    bottom: 18%
+    left: 24%
+    animation-delay: .17s
+.header__cloud-word22 
+    color: #2f183a
+    font-size: 3rem
+    bottom: 31%
+    left: 30%
+    animation-delay: .08s
+.header__cloud-word23 
+    color: #d0920f
+    font-size: 3rem
+    bottom: 25%
+    left: 19%
+    letter-spacing: 8px
+    animation-delay: .28s
+.header__cloud-word24 
+    color: #158cd2
+    font-size: 2rem
+    bottom: 19%
+    right: 22%
+    font-weight: 700
+    font-family: 'Anton', Arial sans-serif
+    letter-spacing: 2px
+    animation-delay: .21s
+.header__cloud-word25 
+    color: #396742
+    font-size: 3rem
+    bottom: 0
+    left: 36%
+    animation-delay: .11s
+.animated
+    animation-duration: 1s
+    animation-fill-mode: both
+.animated.infinite
+    animation-iteration-count: infinite
+.animated.bounceIn
+    animation-duration: .75s
+@keyframes heartbeat
+    from
+        transform: scale(1)
+        transform-origin: center center
+        animation-timing-function: ease-out
+    10%
+        transform: scale(.91)
+        animation-timing-function: ease-in
+    17%
+        transform: scale(.98)
+        animation-timing-function: ease-out
+    33%
+        transform: scale(.87)
+        animation-timing-function: ease-in
+    45%
+        transform: scale(1)
+        animation-timing-function: ease-out
+.bounceIn
+    animation-name: bounceIn
+@keyframes bounceIn
+    0%,
+    100%,
+    20%,
+    40%,
+    60%,
+    80%
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+    0%
+        transform: scale3d(0, 0, 0)
+    20%
+        transform: scale3d(1.1, 1.1, 1.1)
+    40%
+        transform: scale3d(.8, .8, .8)
+    60%
+        transform: scale3d(1.04, 1.04, 1.04)
+    80%
+        transform: scale3d(.96, .96, .96)
+    100%
+        transform: scale3d(1, 1, 1)
 @import "media" // Всегда в конце
