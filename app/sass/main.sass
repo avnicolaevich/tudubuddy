@@ -262,8 +262,7 @@ h1, h2, h3, h4, h5, h6, p
     line-height: 1.3
 .reception__wrapper 
     max-width: 360px
-    height: 234px
-    overflow: hidden
+	margin-bottom: 20px
 .reception__count 
     font-size: 2rem
     color: #ec7e27
@@ -285,6 +284,17 @@ h1, h2, h3, h4, h5, h6, p
 .reception__list-item:before 
     content: '-'
     font-size: 1.6rem
+.row.is-flex
+	display: flex
+	flex-wrap: wrap
+.row.is-flex > [class*='col-']
+	display: flex
+	flex-direction: column
+.is-flex .reception__wrapper
+	background: none
+	position: static
+.is-flex [class*="col-"]
+	background: #fff
 /*---Reception---end---*/
 /*---Periodic---*/
 .periodic
